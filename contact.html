@@ -1,1 +1,32 @@
-
+<!--Case 1: Pure CSS (Zero-JS)-->
+<form action="/contact" method="POST">    
+  <div class="grid2">
+    <fieldset class="ui-float-group">
+      <input type="text" name="score[]" class="ui-input" placeholder="First Name required" required>
+      <legend class="ui-label">First Name required</legend>
+    </fieldset>
+    <fieldset class="ui-float-group">
+      <input type="text" name="score[]" class="ui-input" placeholder="Last Name required" autocomplete="family-name" maxlength="60" required>
+      <legend class="ui-label">Last Name required</legend>
+    </fieldset>
+  </div>
+  <div class="grid2">
+    <fieldset class="ui-float-group">
+      <input type="email" name="score[]" class="ui-input" placeholder="Email required" autocomplete="email" maxlength="100" minlength="7" required>
+      <legend class="ui-label">Email required</legend>
+    </fieldset>
+    <fieldset class="ui-float-group">
+      <input type="tel" name="score[]" class="ui-input" minlength="10" maxlength="14" placeholder="Phone" autocomplete="tel">
+      <legend class="ui-label">Phone</legend>
+    </fieldset>
+  </div>
+  <fieldset class="ui-float-group">
+    <input name="score[]" class="ui-input" placeholder="Subject required" maxlength="200" required>
+    <legend class="ui-label">Subject required</legend>
+  </fieldset>
+  <fieldset class="ui-float-group">
+    <textarea id="note" name="score[]" class="ui-input" cols="40" rows="6" maxlength="1024" placeholder="Type your note here."></textarea>
+    <legend class="ui-label">Note</legend>
+  </fieldset> 
+  <button id="btnS" type="submit" class="gradient">Submit</button>
+</form>
