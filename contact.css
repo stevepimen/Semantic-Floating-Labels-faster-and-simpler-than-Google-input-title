@@ -1,0 +1,67 @@
+body{text-align:center;font-weight:bold}
+form {width:90%;margin: auto}
+.hide{display:none!important}
+input {font-size:1.1rem;margin:.5em}
+textarea{border:none;width:100%}
+
+/* Ensure the fieldset is the positioning anchor */
+.ui-float-group {
+position: relative;
+border: 1px solid #ccc;
+margin-top: 1.5rem; /* Space for the floating label */
+padding: 0;
+}
+
+.ui-input {
+display: block;
+width: 100%;
+border-radius:10px;
+border: none;
+padding: 1rem 0.5rem;
+outline: none;
+background: transparent;
+}
+
+/* 1. Hide the legend by default */
+.ui-label {
+position: absolute;
+top: 0;
+left: 10px;
+opacity: 0;
+transform: translateY(0);
+transition: all 0.2s ease-in-out;
+pointer-events: none;
+background: white; /* Matches page background to mask the border */
+padding: 0 5px;
+font-size: 0.85rem;
+color: #666;
+}
+/* 2. Show the legend when focused OR when text exists */
+/* Logic: If placeholder is NOT shown, then text IS present */
+.ui-input:focus + .ui-label,
+.ui-input:not(:placeholder-shown) + .ui-label {
+opacity: 1;
+transform: translateY(-1.2rem); /* Moves it up onto the fieldset border */
+}
+
+/* 3. Hide the actual placeholder text when the legend is visible to avoid redundancy */
+.ui-input:focus::placeholder {
+color: transparent;
+}
+.gradient{border-radius: 4px;cursor: pointer;color:white;width:20%;margin:1em;z-index:1;padding:1em;background:linear-gradient(180deg, rgb(86, 88, 255) 0%, rgba(217, 253, 253,0) 100%) !important;}
+.vtsp0{display:none}
+.msg {
+margin:1rem;
+padding:4rem;
+border-radius: 4px;
+font-size: 2rem;
+background:black;
+color: #d9e3f8;
+}
+.grid2{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:600px){.grid2{grid-template-columns:1fr;}}
+
+/* Target the browser's internal autofill state */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
