@@ -1,0 +1,2 @@
+# Semantic-Floating-Labels-faster-and-simpler-than-Google-input-title
+This implementation proposes a radical simplification of the Floating Label user interface pattern. By leveraging the native structural relationship between the HTML &lt;fieldset> and &lt;legend> elements, we eliminate the DOM bloat and CSS complexity characteristic of traditional framework-based approaches (e.g., Google Material Design).
